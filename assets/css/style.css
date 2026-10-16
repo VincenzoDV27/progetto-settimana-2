@@ -26,7 +26,7 @@ button {
   background: none;
 }
 
-main > :not(.hero) {
+main {
   max-width: 920px;
   margin-inline: auto;
 }
@@ -35,6 +35,12 @@ h2 {
   padding-top: 30px;
   padding-bottom: 10px;
   text-align: left;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Scrivi qui sotto i tuoi stili */
@@ -234,6 +240,21 @@ input {
 
 /* END */
 
+/* BUTTON GRIGLIA - HOME */
+.btn-next {
+  margin-top: 20px;
+  padding: 30px;
+  width: 20%;
+  text-align: center;
+  background-color: #232f3e;
+  color: white;
+  font-size: 20px;
+}
+
+.btn-next:hover {
+  text-decoration: underline;
+}
+
 /* FOOTER */
 
 footer {
@@ -251,4 +272,43 @@ footer div {
 
 footer ul {
   list-style: none;
+}
+
+/* TABELLA */
+
+.table-products {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 50px;
+}
+
+.table-products th {
+  padding: 12px;
+  background-color: #232f3e;
+  color: white;
+}
+
+.table-products td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-products tbody tr:hover {
+  background-color: #ffd814;
+}
+
+.btn-home {
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+  width: 20%;
+  text-align: center;
+  background-color: #232f3e;
+  color: white;
+  font-size: 20px;
+}
+
+.btn-home:hover {
+  text-decoration: underline;
 }

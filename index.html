@@ -6,13 +6,14 @@
     <title>Amazon Homepage — Week Project</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script type="module" src="assets/js/script.js"></script>
+    <!-- <script type="module" src="assets/js/esercizi.js"></script> -->
   </head>
   <body>
     <header>
       <!-- Logo, barra di ricerca, link Account / Ordini / Carrello -->
       <div class="nav-bar">
         <div class="logo">
-          <a href="#index.html">amazon</a>
+          <a href="index.html">amazon</a>
         </div>
         <input
           type="text"
@@ -33,12 +34,12 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <h1>Le offerte di oggi</h1>
-        <p>Sconti fino al 70% su elettronica, libri, casa e molto altro</p>
-      </section>
+    <section class="hero">
+      <h1>Le offerte di oggi</h1>
+      <p>Sconti fino al 70% su elettronica, libri, casa e molto altro</p>
+    </section>
 
+    <main>
       <section class="categorie">
         <h2>Categorie</h2>
         <div class="card-categories">
@@ -77,111 +78,11 @@
       <section class="prodotti">
         <!-- Griglia prodotti (Versione Base: HTML statico; Intermedia/Avanzata: generata da JS) -->
         <h2>I più venduti</h2>
-        <div class="card-products">
-          <div class="prod-img">
-            <img src="assets/img/cuffie.jpg" alt="cosa" />
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          </p>
-          <div class="rating">
-            <span class="stars">★★★★★</span> <span class="medium">(3.7)</span>
-          </div>
-          <div class="price">prezzo</div>
-          <button type="button" class="add-cart">Aggiungi al carrello</button>
-        </div>
-        <div class="card-products">
-          <div class="prod-img">
-            <img src="assets/img/tablet.jpg" alt="cosa" />
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          </p>
-          <div class="rating">
-            <span class="stars">★★★★☆</span> <span class="medium">(3.7)</span>
-          </div>
-          <div class="price">prezzo</div>
-          <button type="button" class="add-cart">Aggiungi al carrello</button>
-        </div>
-        <div class="card-products">
-          <div class="prod-img">
-            <img src="assets/img/libro.jpg" alt="cosa" />
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          </p>
-          <div class="rating">
-            <span class="stars">★★★★☆</span> <span class="medium">(3.7)</span>
-          </div>
-          <div class="price">prezzo</div>
-          <button type="button" class="add-cart">Aggiungi al carrello</button>
-        </div>
-        <div class="card-products">
-          <div class="prod-img">
-            <img src="assets/img/zaino.jpg" alt="cosa" />
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          </p>
-          <div class="rating">
-            <span class="stars">★★★★☆</span> <span class="medium">(3.7)</span>
-          </div>
-          <div class="price">prezzo</div>
-          <button type="button" class="add-cart">Aggiungi al carrello</button>
-        </div>
-        <div class="card-products">
-          <div class="prod-img">
-            <img src="assets/img/lampada.jpg" alt="cosa" />
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          </p>
-          <div class="rating">
-            <span class="stars">★★☆☆☆</span> <span class="medium">(3.7)</span>
-          </div>
-          <div class="price">prezzo</div>
-          <button type="button" class="add-cart">Aggiungi al carrello</button>
-        </div>
-        <div class="card-products">
-          <div class="prod-img">
-            <img src="assets/img/smartwatch.jpg" alt="cosa" />
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          </p>
-          <div class="rating">
-            <span class="stars">★★☆☆☆</span> <span class="medium">(3.7)</span>
-          </div>
-          <div class="price">prezzo</div>
-          <button type="button" class="add-cart">Aggiungi al carrello</button>
-        </div>
-        <div class="card-products">
-          <div class="prod-img">
-            <img src="assets/img/mouse.jpg" alt="cosa" />
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          </p>
-          <div class="rating">
-            <span class="stars">★★☆☆☆</span> <span class="medium">(3.7)</span>
-          </div>
-          <div class="price">prezzo</div>
-          <button type="button" class="add-cart">Aggiungi al carrello</button>
-        </div>
-        <div class="card-products">
-          <div class="prod-img">
-            <img src="assets/img/caffettiera.jpg" alt="cosa" />
-          </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          </p>
-          <div class="rating">
-            <span class="stars">★★★☆☆</span> <span class="medium">(3.7)</span>
-          </div>
-          <div class="price">prezzo</div>
-          <button type="button" class="add-cart">Aggiungi al carrello</button>
-        </div>
+        <div class="products-card"></div>
       </section>
+      <a href="griglia.html"
+        ><button type="button" class="btn-next">Vai alla griglia</button></a
+      >
     </main>
 
     <footer>

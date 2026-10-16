@@ -1,27 +1,12 @@
-/*
-REGOLE
-- Le risposte vanno scritte in JavaScript sotto questo blocco.
-- Puoi testare aprendo index.html nel browser e guardando la console (DevTools).
-- Workflow consigliato: prima costruisci la Versione Base in HTML/CSS,
-  poi torna qui per la Versione Intermedia (generazione griglia da array di prodotti)
-  e per la Versione Avanzata (filtri, ordinamento, carrello dinamico, localStorage).
-- Cerca solo cose non viste a lezione. Tutto il necessario è già stato spiegato in settimana.
-*/
-
-/* VERSIONE INTERMEDIA — array prodotti
-   Crea l'array "prodotti" con almeno 12 oggetti.
-   Ogni oggetto: nome, categoria, prezzo, rating (1-5), immagine, disponibile.
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 const prodotti = [
+  // ARRAY
+
   {
     nome: "Cuffie",
     categoria: "Elettronica",
     descrizione: "Cuffie wireless con cancellazione del rumore",
     prezzo: 29.99,
-    rating: 4,
+    rating: 4.2,
     immagine: "cuffie.jpg",
     disponibile: false,
   },
@@ -30,7 +15,7 @@ const prodotti = [
     categoria: "Elettronica",
     descrizione: "Tablet 10 pollici 64GB",
     prezzo: 199.9,
-    rating: 5,
+    rating: 4.7,
     immagine: "tablet.jpg",
     disponibile: true,
   },
@@ -39,7 +24,7 @@ const prodotti = [
     categoria: "Libri",
     descrizione: "Il romanzo dell'anno",
     prezzo: 40.0,
-    rating: 4,
+    rating: 4.0,
     immagine: "libro.jpg",
     disponibile: true,
   },
@@ -48,7 +33,7 @@ const prodotti = [
     categoria: "Abbigliamento",
     descrizione: "Zaino da viaggio 30L impermeabile",
     prezzo: 15.99,
-    rating: 4,
+    rating: 3.8,
     immagine: "zaino.jpg",
     disponibile: true,
   },
@@ -57,7 +42,7 @@ const prodotti = [
     categoria: "Casa",
     descrizione: "Lampada LED da scrivania orientabile",
     prezzo: 70.99,
-    rating: 3,
+    rating: 4.4,
     immagine: "lampada.jpg",
     disponibile: true,
   },
@@ -66,7 +51,7 @@ const prodotti = [
     categoria: "Elettronica",
     descrizione: "Smartwatch fitness con GPS",
     prezzo: 55.0,
-    rating: 5,
+    rating: 4.0,
     immagine: "smartwatch.jpg",
     disponibile: true,
   },
@@ -75,7 +60,7 @@ const prodotti = [
     categoria: "Elettronica",
     descrizione: "Mouse ergonomico wireless",
     prezzo: 60.0,
-    rating: 4,
+    rating: 4.6,
     immagine: "mouse.jpg",
     disponibile: false,
   },
@@ -84,7 +69,7 @@ const prodotti = [
     categoria: "Casa",
     descrizione: "Caffettiera moka 6 tazze",
     prezzo: 8.99,
-    rating: 2,
+    rating: 4.8,
     immagine: "caffettiera.jpg",
     disponibile: true,
   },
@@ -93,7 +78,7 @@ const prodotti = [
     categoria: "Abbigliamento",
     descrizione: "Felpa con cappuccio",
     prezzo: 24.99,
-    rating: 5,
+    rating: 2.3,
     immagine: "felpa.jpg",
     disponibile: true,
   },
@@ -102,7 +87,7 @@ const prodotti = [
     categoria: "Elettronica",
     descrizione: "Tastiera wireless meccanica",
     prezzo: 49.99,
-    rating: 4,
+    rating: 3.0,
     immagine: "tastiera.jpg",
     disponibile: false,
   },
@@ -111,7 +96,7 @@ const prodotti = [
     categoria: "Libri",
     descrizione: "Quaderno da 120 pagine a righe",
     prezzo: 1.99,
-    rating: 3,
+    rating: 3.7,
     immagine: "quaderno.jpg",
     disponibile: true,
   },
@@ -120,124 +105,125 @@ const prodotti = [
     categoria: "Casa",
     descrizione: "Cuscino bianco bello comodo",
     prezzo: 12.99,
-    rating: 2,
+    rating: 3.9,
     immagine: "cuscino.jpg",
     disponibile: true,
   },
 ];
 
-/* VERSIONE INTERMEDIA — formattaPrezzo(prezzo)
-   Funzione che ritorna una stringa tipo "€ 19,99".
-   Esempio in console.log: Monitor: € 150,00
-*/
+//CARD
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function generaCard() {
+  const card = document.querySelector(".products-card");
 
-function formattaPrezzo(prezzo) {
-  return String(prezzo.prezzo);
-}
-
-for (let i = 0; i < prodotti.length; i++) {
-  console.log(`Oggetto: € ${formattaPrezzo(prodotti[i])}`);
-}
-
-/* VERSIONE INTERMEDIA — stelline(rating)
-   Funzione che ritorna una stringa di stelline piene/vuote.
-   Esempio: rating 3 → "★★★☆☆"
-   Esempio in console.log: Monitor: rating 3 → "★★★☆☆"
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-// const RATING = document.querySelectorAll(".rating .stars");
-
-function stars(prodotti, stelle) {
-  if (prodotto.rating === 5) {
-    elemento.textContent = "★★★★★";
-  } else if (prodotto.rating === 4) {
-    elemento.textContent = "★★★★☆";
-  } else if (prodotto.rating === 3) {
-    elemento.textContent = "★★★☆☆";
-  } else if (prodotto.rating === 2) {
-    elemento.textContent = "★★☆☆☆";
-  } else if (prodotto.rating === 1) {
-    elemento.textContent = "★☆☆☆☆";
-  }
-}
-
-// for (let i = 0; i < prodotti.length; i++) {
-//   stars(prodotti[i], RATING[i]);
-// }
-
-/* VERSIONE INTERMEDIA — Filtro per categoria
-   Funzione che riceve il parametro categoria e filtra l'array prodotti mostrando solo i prodotti della categoria ricevuta
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
-function categories(categoria) {
-  const prodFiltrati = [];
+  card.innerHTML = "";
 
   for (let i = 0; i < prodotti.length; i++) {
-    if (prodotti[i].categoria === categoria) {
-      prodFiltrati.push(prodotti[i]);
+    card.innerHTML += `
+      <div class="card-products">
+        <div class="prod-img"></div>
+        <div class="description"></div>
+        <div class="rating">
+          <span class="stars"></span>
+          <span class="medium"></span>
+        </div>
+        <div class="price"></div>
+        <button type="button" class="add-cart">
+          Aggiungi al carrello
+        </button>
+      </div>
+    `;
+  }
+
+  showImages();
+  showDescriptions();
+  showRating();
+  showMediaRating();
+  showPrice();
+  showAvailability();
+}
+// IMMAGINI
+
+function showImages() {
+  const immagini = document.querySelectorAll(".prod-img");
+
+  for (let i = 0; i < immagini.length; i++) {
+    immagini[i].innerHTML =
+      `<img src="assets/img/${prodotti[i].immagine}" alt="${prodotti[i].nome}">`;
+  }
+}
+
+// DESCRIZIONI
+function showDescriptions() {
+  const descrizioni = document.querySelectorAll(".description");
+
+  for (let i = 0; i < descrizioni.length; i++) {
+    descrizioni[i].textContent = prodotti[i].descrizione;
+  }
+}
+
+// RATING
+
+function showRating() {
+  const RATING = document.querySelectorAll(".rating .stars");
+
+  for (let i = 0; i < RATING.length; i++) {
+    const ratingArrotondato = Math.round(prodotti[i].rating);
+
+    if (ratingArrotondato === 5) {
+      RATING[i].textContent = "★★★★★";
+    } else if (ratingArrotondato === 4) {
+      RATING[i].textContent = "★★★★☆";
+    } else if (ratingArrotondato === 3) {
+      RATING[i].textContent = "★★★☆☆";
+    } else if (ratingArrotondato === 2) {
+      RATING[i].textContent = "★★☆☆☆";
+    } else if (ratingArrotondato === 1) {
+      RATING[i].textContent = "★☆☆☆☆";
+    } else {
+      RATING[i].textContent = "☆☆☆☆☆";
     }
   }
-  return prodFiltrati;
 }
-console.log(categories("Elettronica"));
 
-/* VERSIONE INTERMEDIA — Filtro disponibilità e rating
-   Funzione che genera un array filtrato dall'array prodotti, mostrando soltanto i prodotti disponibili con rating >= 3
-*/
+// MEDIA RATING
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-function available(disponibile) {
-  const prodAvailable = [];
+function showMediaRating() {
+  const medium = document.querySelectorAll(".rating .medium");
 
-  for (let i = 0; i < prodotti.length; i++) {
-    if (prodotti[i].disponibile === true && prodotti[i].rating >= 3) {
-      prodAvailable.push(prodotti[i]);
+  for (let i = 0; i < medium.length; i++) {
+    medium[i].innerHTML = `(${prodotti[i].rating})`;
+  }
+}
+
+// PREZZO
+
+function showPrice() {
+  const price = document.querySelectorAll(".price");
+  for (let i = 0; i < price.length; i++) {
+    price[i].innerHTML = `€ ${prodotti[i].prezzo}`;
+  }
+}
+
+// DISPONIBILE
+
+function showAvailability() {
+  const price = document.querySelectorAll(".price");
+  const buttons = document.querySelectorAll(".add-cart");
+
+  for (let i = 0; i < price.length; i++) {
+    switch (prodotti[i].disponibile) {
+      case false:
+        price[i].textContent = "Non disponibile";
+        buttons[i].style.visibility = "hidden";
+        break;
+
+      default:
+        break;
     }
   }
-  return prodAvailable;
 }
-console.log(available(prodotti));
 
-/* --------------------------------------------------------------
+// EXEC
 
-/* VERSIONE AVANZATA — renderProdotti(lista)
-   Funzione che, dato un array di prodotti, genera la griglia nel DOM.
-   Niente HTML hard-coded per i prodotti: tutto generato dal JavaScript.
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
-/* VERSIONE AVANZATA — Aggiungi al carrello
-   Quando si clicca il bottone "Aggiungi al carrello", incrementa il contatore
-   nell'header (Carrello (0) → Carrello (1) → ...).
-   Per i prodotti esauriti: bottone disabilitato e testo "Esaurito".
-   Suggerimento: usa una closure come visto in aula
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
-/* VERSIONE AVANZATA — Ordinamento
-   Menu a tendina con: Prezzo crescente, Prezzo decrescente, Rating.
-   Suggerimento: per rendere più leggibile la select puoi usare optgroup
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
-/* VERSIONE AVANZATA — Riepilogo carrello
-   Pagina carrello con elenco prodotti aggiunti, totale, bottone "Svuota".
-   Concetto da scoprire: localStorage.setItem / localStorage.getItem.
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
-/* VERSIONE AVANZATA — localStorage
-   Il carrello sopravvive al refresh della pagina.
-   Concetto da scoprire: localStorage.setItem / localStorage.getItem.
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+generaCard();
